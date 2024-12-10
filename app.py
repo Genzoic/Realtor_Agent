@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import os
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
-from tavily import TavilyClient
+
 from dotenv import load_dotenv
 from sheet import *
 import sqlite3 
@@ -13,7 +13,7 @@ from pydantic import BaseModel, Field
 from langchain_core.output_parsers import JsonOutputParser
 import time
 from streamlit.components.v1 import declare_component
-from utils_perplexity import *
+
 import googlemaps
 
 
@@ -520,7 +520,7 @@ if not st.session_state.themes["refreshed"]:
 page = st.sidebar.selectbox("Choose a page", ["Configurations", "Customizations"])
 # Set up session state to store data between interactions
 
-tavily_client = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
+
 
 
 
